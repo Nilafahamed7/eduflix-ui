@@ -10,7 +10,7 @@ const Successfull = () => {
 
       {/* Sidebar */}
       <aside className="w-64 bg-black text-white p-5">
-        <h1 className="text-3xl font-bold mb-10">Netflix</h1>
+        <h1 className="text-3xl text-red-700 font-bold mb-10">Netflix</h1>
         <nav className="space-y-6">
           <p className="hover:text-red-500 cursor-pointer">Dashboard</p>
           <p className="hover:text-red-500 cursor-pointer">My List</p>

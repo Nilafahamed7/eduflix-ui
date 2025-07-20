@@ -53,15 +53,15 @@ const Loginpage = () => {
   return (
     <div className=' relative w-full h-screen bg-black'>
 
-      <img className='absolute top-5 lg:w-44 left-8 lg:left-24 w-36 object-contain z-10' src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="" />
+      <img className='absolute top-3 lg:w-44 left-8 lg:left-24 w-36 object-contain z-10' src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="" />
 
       <div>
         <img className=' w-full h-screen object-cover opacity-50' src={bg} alt="" />
       </div>
 
-      <div className='flex absolute top-32 right-6 left-10 sm:left-16 md:left-42  justify-center items-center '>
+      <div className='flex absolute top-16 sm:top-24 right-6 left-10 sm:left-16 md:left-42  justify-center items-center '>
 
-        <div className='bg-black  bg-opacity-70 px-16 py-20 rounded-md text-white w-full max-w-lg'>
+        <div className='bg-black  bg-opacity-70 px-16 py-10 sm:py-20 rounded-md text-white w-full max-w-lg'>
           <h2 className='text-3xl font-bold mb-6'> Sign In</h2>
 
           <form onSubmit={handleSignup} className='flex flex-col gap-4'>

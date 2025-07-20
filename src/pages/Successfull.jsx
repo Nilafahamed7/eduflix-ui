@@ -58,16 +58,16 @@ const Successfull = () => {
           <h3 className="text-xl sm:text-2xl font-semibold mb-4">Recently Watched</h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             <div className="bg-black rounded-lg overflow-hidden h-40 sm:h-48">
-              <img src={m1} alt="movie" className="w-full h-full object-cover" />
+              <img src={m1} alt="movie" className="w-full h-full object-contain" />
             </div>
             <div className="bg-black rounded-lg overflow-hidden h-40 sm:h-48">
-              <img src={m2} alt="movie" className="w-full h-full object-cover" />
+              <img src={m2} alt="movie" className="w-full h-full object-contain" />
             </div>
             <div className="bg-black rounded-lg overflow-hidden h-40 sm:h-48">
-              <img src={m3} alt="movie" className="w-full h-full object-cover" />
+              <img src={m3} alt="movie" className="w-full h-full object-contain" />
             </div>
             <div className="bg-black rounded-lg overflow-hidden h-40 sm:h-48">
-              <img src={m4} alt="movie" className="w-full h-full object-cover" />
+              <img src={m4} alt="movie" className="w-full h-full object-contain" />
             </div>
           </div>
         </div>

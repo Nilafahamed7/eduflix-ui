@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import bg from "../assets/background.jpg"
 import axios from "axios"
 import {useNavigate} from "react-router-dom"
+import eduflix from "../assets/eduflix logo.png"
 
 const Loginpage = () => {
 
@@ -53,7 +54,7 @@ const Loginpage = () => {
   return (
     <div className=' relative w-full h-screen bg-black'>
 
-      <img className='absolute top-3 lg:w-44 left-8 lg:left-24 w-36 object-contain z-10' src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="" />
+      <img className='absolute top-3 lg:w-44 left-8 lg:left-24 w-36 object-contain z-10' src={eduflix} alt="" />
 
       <div>
         <img className=' w-full h-screen object-cover opacity-50' src={bg} alt="" />

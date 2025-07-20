@@ -11,11 +11,13 @@ const Loginpage = () => {
   const [pass,setpass] = useState("")
   const [emailerr,setemailerr] = useState("")
   const [passerr,setpasserr] = useState("")
+  const [loading,setloading] = useState(false)
 
   const check = ()=>{
-
+    setloading(true)
     var logindetails = axios.post("https://eduflix-login.onrender.com/login", {"email":email,"password":pass})
     logindetails.then(function(data){
+      setloading(false)
       if(data.data == true){
         navigate("/success")
       }
@@ -86,7 +88,7 @@ const Loginpage = () => {
             )}
            
 
-            <button type='submit' className='text-white  w-full bg-red-600 p-3 hover:bg-red-700 transition disabled:opacity-50'>Sign in</button>
+            <button type='submit' disabled={loading} className='text-white  w-full bg-red-600 p-3 hover:bg-red-700 transition disabled:opacity-50'>{loading ?"Signing in...": "Sign in"}</button>
 
 
           </form>

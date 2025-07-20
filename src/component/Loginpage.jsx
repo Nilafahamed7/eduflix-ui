@@ -14,7 +14,7 @@ const Loginpage = () => {
 
   const check = ()=>{
 
-    var logindetails = axios.post("https://eduflix-login.onrender.com/login")
+    var logindetails = axios.post("https://eduflix-login.onrender.com/login", {"email":email,"password":pass})
     logindetails.then(function(data){
       if(data.data == true){
         navigate("/success")

@@ -88,7 +88,7 @@ const Loginpage = () => {
             )}
            
 
-            <button type='submit' disabled={loading} className='text-white  w-full bg-red-600 p-3 hover:bg-red-700 transition disabled:opacity-50'>{loading ?"S2igning in...": "Sign in"}</button>
+            <button type='submit' disabled={loading} className='text-white  w-full bg-red-600 p-3 hover:bg-red-700 transition disabled:opacity-50'>{loading ?"Signing in...": "Sign in"}</button>
 
 
           </form>

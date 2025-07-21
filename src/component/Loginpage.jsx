@@ -106,7 +106,7 @@ const Loginpage = () => {
             <label className='text-sm text-gray-400 '>Remember me</label>
           </div>
 
-          <div className='flex items-center mt-4'>
+          <div className='flex items-center mt-4 gap-1'>
             <p className='text-gray-400'>New to Netflix?</p>
             <p className=' font-bold hover:underline cursor-pointer'>Sign up now.</p>
           </div>

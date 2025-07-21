@@ -3,6 +3,14 @@ import m1 from "../assets/m1.png"
 import m2 from "../assets/m2.png"
 import m3 from "../assets/m3.png"
 import m4 from "../assets/m4.png"
+import m5 from "../assets/m5.webp"
+import m6 from "../assets/m6.webp"
+import m7 from "../assets/m7.webp"
+import m8 from "../assets/m8.webp"
+import m9 from "../assets/m9.webp"
+import m10 from "../assets/m10.webp"
+import m11 from "../assets/m11.webp"
+import m12 from "../assets/m12.webp"
 
 
 const Successfull = () => {
@@ -11,7 +19,7 @@ const Successfull = () => {
 
       {/* Sidebar */}
       <aside className="hidden md:block w-64 bg-black text-white p-5">
-        <h1 className="text-3xl text-red-700 font-bold mb-10">Netflix</h1>
+        <h1 className="text-4xl text-red-700 font-bold mb-10">Netflix</h1>
         <nav className="space-y-6">
           <p className="hover:text-red-500 cursor-pointer">Dashboard</p>
           <p className="hover:text-red-500 cursor-pointer">My List</p>
@@ -56,20 +64,48 @@ const Successfull = () => {
         {/* Recently Watched */}
         <div className="mt-10">
           <h3 className="text-xl sm:text-2xl font-semibold mb-4">Recently Watched</h3>
+
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-            <div className="bg-black rounded-lg overflow-hidden h-40 sm:h-48">
-              <img src={m1} alt="movie" className="w-full h-full object-contain" />
+            <div className="bg-black rounded-lg overflow-hidden h-40 sm:h-48 hover:-translate-y-2">
+              <img src={m1} alt="movie" className="w-full h-full object-contain " />
             </div>
-            <div className="bg-black rounded-lg overflow-hidden h-40 sm:h-48">
+            <div className="bg-black rounded-lg overflow-hidden h-40 sm:h-48 hover:-translate-y-2">
               <img src={m2} alt="movie" className="w-full h-full object-contain" />
             </div>
-            <div className="bg-black rounded-lg overflow-hidden h-40 sm:h-48">
+            <div className="bg-black rounded-lg overflow-hidden h-40 sm:h-48 hover:-translate-y-2">
               <img src={m3} alt="movie" className="w-full h-full object-contain" />
             </div>
-            <div className="bg-black rounded-lg overflow-hidden h-40 sm:h-48">
+            <div className="bg-black rounded-lg overflow-hidden  h-40 sm:h-48 hover:-translate-y-2">
               <img src={m4} alt="movie" className="w-full h-full object-contain" />
             </div>
+             <div className="bg-black rounded-lg overflow-hidden  h-40 sm:h-48 hover:-translate-y-2">
+              <img src={m5} alt="movie" className="w-full h-full object-contain" />
+            </div>
+             <div className="bg-black rounded-lg overflow-hidden  h-40 sm:h-48 hover:-translate-y-2">
+              <img src={m6} alt="movie" className="w-full h-full object-contain" />
+            </div>
+             <div className="bg-black rounded-lg overflow-hidden  h-40 sm:h-48 hover:-translate-y-2">
+              <img src={m7} alt="movie" className="w-full h-full object-contain" />
+            </div>
+             <div className="bg-black rounded-lg overflow-hidden  h-40 sm:h-48 hover:-translate-y-2">
+              <img src={m8} alt="movie" className="w-full h-full object-contain" />
+            </div>
+             <div className="bg-black rounded-lg overflow-hidden  h-40 sm:h-48 hover:-translate-y-2">
+              <img src={m9} alt="movie" className="w-full h-full object-contain" />
+            </div>
+             <div className="bg-black rounded-lg overflow-hidden  h-40 sm:h-48 hover:-translate-y-2">
+              <img src={m10} alt="movie" className="w-full h-full object-contain" />
+            </div>
+             <div className="bg-black rounded-lg overflow-hidden  h-40 sm:h-48 hover:-translate-y-2">
+              <img src={m11} alt="movie" className="w-full h-full object-contain" />
+            </div>
+             <div className="bg-black rounded-lg overflow-hidden  h-40 sm:h-48 hover:-translate-y-2">
+              <img src={m12} alt="movie" className="w-full h-full object-contain" />
+            </div>
+
+
           </div>
+
         </div>
 
       </main>

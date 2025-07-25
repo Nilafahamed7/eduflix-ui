@@ -19,7 +19,7 @@ const Loginpage = () => {
     console.log("Sending password:", pass);
 
     setloading(true)
-    var logindetails = axios.post("https://eduflix-login.onrender.com/login", {useremail:email, password: pass })
+    var logindetails = axios.post("https://eduflix-login.onrender.com/login", {"useremail":email, "password":pass })
     logindetails.then(function (data) {
       setloading(false)
       if (data.data == true) {

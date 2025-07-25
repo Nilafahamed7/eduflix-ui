@@ -1,59 +1,62 @@
 import React, { useState } from 'react'
 import bg from "../assets/background.jpg"
 import axios from "axios"
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import eduflix from "../assets/eduflix logo.png"
 
 const Loginpage = () => {
 
   const navigate = useNavigate()
-  const [email,setemail] = useState("")
-  const [pass,setpass] = useState("")
-  const [emailerr,setemailerr] = useState("")
-  const [passerr,setpasserr] = useState("")
-  const [loading,setloading] = useState(false)
+  const [email, setemail] = useState("")
+  const [pass, setpass] = useState("")
+  const [emailerr, setemailerr] = useState("")
+  const [passerr, setpasserr] = useState("")
+  const [loading, setloading] = useState(false)
 
-  const check = ()=>{
-    // https://eduflix-login.onrender.com/login
+  const check = () => {
+
+    console.log("Sending email:", email);
+    console.log("Sending password:", pass);
+
     setloading(true)
-    var logindetails = axios.post("https://eduflix-login.onrender.com/login", {"email":email,"password":pass})
-    logindetails.then(function(data){
+    var logindetails = axios.post("https://eduflix-login.onrender.com/login", {useremail:email, password: pass })
+    logindetails.then(function (data) {
       setloading(false)
-      if(data.data == true){
+      if (data.data == true) {
         navigate("/success")
       }
-      else{
+      else {
         navigate("/failed")
       }
 
     })
   }
 
-  const handleSignup=(e)=>{
+  const handleSignup = (e) => {
     e.preventDefault()
 
     setemailerr("")
     setpasserr("")
 
-    let valid=true
+    let valid = true
 
-    if(!email){
+    if (!email) {
       setemailerr("please enter your email.")
-      valid=false
+      valid = false
     }
-    if(!pass){
+    if (!pass) {
       setpasserr("please enter your password")
       valid = false
-    }else if(pass.length<4 || pass.length>60){
+    } else if (pass.length < 4 || pass.length > 60) {
       setpasserr("Password must be between 4 and 60 characters.")
-      valid=false
+      valid = false
     }
-    if(valid){
+    if (valid) {
       check()
     }
 
   }
-  
+
   return (
     <div className=' relative w-full h-screen bg-black'>
 
@@ -70,26 +73,26 @@ const Loginpage = () => {
 
           <form onSubmit={handleSignup} className='flex flex-col gap-4'>
 
-            <input onChange={(e)=>{
+            <input onChange={(e) => {
               setemail(e.target.value)
-            }} className={` border p-3 bg-transparent placeholder-gray-400 focus:outline-none ${emailerr?"border-red-600":"border-gray-600"}`} type="email" value={email} name="email" placeholder='Email or mobile number'  />
-            
+            }} className={` border p-3 bg-transparent placeholder-gray-400 focus:outline-none ${emailerr ? "border-red-600" : "border-gray-600"}`} type="email" value={email} name="email" placeholder='Email or mobile number' />
+
             {
               emailerr && (
                 <p className='text-red-600  text-md mt-1'>{emailerr}</p>
               )
             }
 
-            <input onChange={(e)=>{
+            <input onChange={(e) => {
               setpass(e.target.value)
-            }} className={`border p-3 bg-transparent placeholder-gray-400 focus:outline-none ${passerr? "border-red-600":"border-gray-600"}`} type="password" value={pass} name="password" placeholder='Password' />
+            }} className={`border p-3 bg-transparent placeholder-gray-400 focus:outline-none ${passerr ? "border-red-600" : "border-gray-600"}`} type="password" value={pass} name="password" placeholder='Password' />
 
-            { passerr && (
-               <p className='text-red-600 text-md mt-1'>{passerr}</p>
+            {passerr && (
+              <p className='text-red-600 text-md mt-1'>{passerr}</p>
             )}
-           
 
-            <button type='submit' disabled={loading} className='text-white  w-full bg-red-600 p-3 hover:bg-red-700 transition disabled:opacity-50'>{loading ?"Signing in...": "Sign in"}</button>
+
+            <button type='submit' disabled={loading} className='text-white  w-full bg-red-600 p-3 hover:bg-red-700 transition disabled:opacity-50'>{loading ? "Signing in..." : "Sign in"}</button>
 
 
           </form>

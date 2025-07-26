@@ -18,17 +18,23 @@ const Loginpage = () => {
     console.log("Sending email:", email);
     console.log("Sending password:", pass);
 
+    
     setloading(true)
     var logindetails = axios.post("https://eduflix-login.onrender.com/login", {"useremail":email, "password":pass })
     logindetails.then(function (data) {
       setloading(false)
       if (data.data == true) {
+        console.log(data)
         navigate("/success")
       }
       else {
         navigate("/failed")
       }
-
+    })
+    .catch(function (error) {
+      setloading(false)
+      console.error("Login error:", error)
+      navigate("/failed")
     })
   }
 
@@ -74,7 +80,7 @@ const Loginpage = () => {
           <form onSubmit={handleSignup} className='flex flex-col gap-4'>
 
             <input onChange={(e) => {
-              setemail(e.target.value)
+              setemail(e.target.value.trim().toLowerCase())
             }} className={` border p-3 bg-transparent placeholder-gray-400 focus:outline-none ${emailerr ? "border-red-600" : "border-gray-600"}`} type="email" value={email} name="email" placeholder='Email or mobile number' />
 
             {
